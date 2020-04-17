@@ -11,7 +11,7 @@ router.post("/api/login", async ctx => {
   console.log(username, password);
   if (username == "123" && password == "123") {
     ctx.status = 200;
-    ctx.body = { code: 1, message: "登录成功" };
+    ctx.body = { code: 1, message: "登录成功1" };
   } else {
     ctx.status = 401;
     ctx.body = { code: 0, message: "用户名或者密码错误" };

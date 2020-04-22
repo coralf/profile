@@ -21,8 +21,8 @@ export default {
   data() {
     return {
       form: {
-        username: "123",
-        password: "123"
+        username: "admin",
+        password: "admin"
       }
     };
   },
@@ -33,11 +33,11 @@ export default {
           ...this.form
         })
         .then(res => {
+          console.log('res',res);
           if (res.status === 200) {
             this.$router.push("/home");
           }
-        })
-        .catch(() => {
+        }).catch(()=>{
           this.$message.error("用户名或密码错误");
         });
     }
